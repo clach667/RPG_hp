@@ -10,14 +10,14 @@ public class Wizard extends Character{
 
         private String house;
 
-        private List<Spell> knownSpells;
+        private String[] knownSpells;
 
         private List<Potion> potions;
 
 
 
 
-    public void defend() {
+        public void defend() {
         }
 
         public Wizard(String name, Pet pet, Wand wand, House house, List<Spell> knownSpells, List<Potion> potions) {
@@ -25,7 +25,7 @@ public class Wizard extends Character{
             this.pet = pet;
             this.wand = wand;
             this.house = String.valueOf(SortingHat.house);
-            this.knownSpells = knownSpells;
+            this.knownSpells = new String[]{String.valueOf(knownSpells)};
             this.potions = potions;
         }
 
@@ -33,8 +33,10 @@ public class Wizard extends Character{
 
 
 
-    public Wizard(String name, Pet pet, Wand wand, House house) {
+        public Wizard(String name, Pet pet, Wand wand, House house) {
             this(name, pet, wand, house, new ArrayList<>(), new ArrayList<>());
 
         }
+
+
 }

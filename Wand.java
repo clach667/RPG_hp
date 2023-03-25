@@ -27,7 +27,7 @@ public class Wand {
         Random random = new Random();
         this.core = Core.values()[random.nextInt(Core.values().length)];
         this.size = random.nextInt(15) + 22;
-        System.out.println("Votre baguette est de taille " + this.size + " et de coeur " + this.core.type + "."+" Cette baguette vous convient parfaitement !");
+        System.out.println("Votre baguette est de taille " + this.size + "cm et de coeur " + this.core.type + "."+" Cette baguette vous convient parfaitement !");
 
     }
 
