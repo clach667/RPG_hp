@@ -1,11 +1,12 @@
 package GameElement;
 
 public class Boss {
-    private int lifePoint;
-    private int maxLifePoint;
-    private String name;
-    private int accuracy;
-    private int damage;
+
+    public static int lifePoint;
+    public int maxLifePoint;
+    public String name;
+    public int accuracy;
+    public int damage;
     private int resistance;
 
     public Boss(int lifePoint, int maxLifePoint, String name, int accuracy, int damage, int resistance) {
@@ -16,12 +17,36 @@ public class Boss {
         this.damage = damage;
         this.resistance = resistance;
     }
-    public void Troll() {
-        this.lifePoint = 100;
-        this.maxLifePoint = 100;
-        this.name = "Troll";
-        this.accuracy = 50;
-        this.damage = 20;
-        this.resistance = 0;
+
+    public static Boss Detractor() {
+        Boss boss = new Boss(200, 200, "Detractor", 50, 50, 0);
+        return  boss;
     }
+
+    public int getResistance() {
+        return resistance;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public int getlifePoint() {
+        return lifePoint;
+    }
+
+    public int getMaxLifePoint() {
+        return maxLifePoint;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAccuracy() {
+        return accuracy;
+    }
+
+
 }
+

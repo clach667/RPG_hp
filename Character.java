@@ -2,10 +2,12 @@ package GameElement;
 
 public abstract class Character {
 
-    private int lifePoint;
-    private final int maxLifePoint;
 
-    private final String name;
+    public static int lifePoint;
+
+    int maxLifePoint;
+
+    String name;
 
     private int accuracy;
 

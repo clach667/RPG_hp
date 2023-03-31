@@ -3,11 +3,17 @@ package GameElement;
 import java.util.Random;
 
 public class Wand {
+    private Wand wand;
     private int size;
     private Core core;
 
+    public Wand(Core core, int size) {
+        this.core = core;
+        this.size = size;
+    }
 
-    public void setSize(int size) {
+
+    public void setSize() {
         this.size = size;
     }
 
@@ -15,7 +21,7 @@ public class Wand {
         return size;
     }
 
-    public void setCore(Core core) {
+    public void setCore() {
         this.core = core;
     }
 
@@ -23,12 +29,14 @@ public class Wand {
         return core;
     }
 
-    public Wand() {
+    public Wand(Wand wand) {
+        this.wand = wand;
         Random random = new Random();
         this.core = Core.values()[random.nextInt(Core.values().length)];
         this.size = random.nextInt(15) + 22;
-        System.out.println("Votre baguette est de taille " + this.size + "cm et de coeur " + this.core.type + "."+" Cette baguette vous convient parfaitement !");
+
 
     }
+
 
 }
